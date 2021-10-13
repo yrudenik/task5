@@ -94,14 +94,13 @@ public class Main {
             }
 
             try {
-                Total total = new Total(totalPrice, totalWeight);
-
                 FileOutputStream export = new FileOutputStream(new File("./exported.xml"));
                 XMLEncoder encoder = new XMLEncoder(export);
                 for (Device device : deviceList) {
                     encoder.writeObject(device);
                 }
-                encoder.writeObject(total);
+//                Total total = new Total(totalPrice, totalWeight);
+//                encoder.writeObject(total);
                 encoder.close();
                 export.close();
 
