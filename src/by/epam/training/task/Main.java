@@ -100,8 +100,14 @@ public class Main {
                 for (Device device : deviceList) {
                     encoder.writeObject(device);
                 }
-//                Total total = new Total(totalPrice, totalWeight);
-//                encoder.writeObject(total);
+
+                Total total = new Total();
+                total.setSumPrice(totalPrice);
+                total.setCurrencyOfSumPrice("BYN");
+                total.setSumWeight(totalWeight);
+                total.setMeasureOfSumWeight("gram");
+                encoder.writeObject(total);
+
                 encoder.close();
                 export.close();
 
