@@ -1,6 +1,6 @@
 package by.epam.training.task.total;
 
-public class Total implements BaseTotal {
+public class Total implements TotalInterface {
 
     private double sumPrice;
     private int sumWeight;

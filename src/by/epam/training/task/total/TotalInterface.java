@@ -1,6 +1,6 @@
 package by.epam.training.task.total;
 
-public interface BaseTotal {
+public interface TotalInterface {
 
     void calculate();
 

@@ -1,6 +1,6 @@
 package by.epam.training.task.devices;
 
-public class Device implements BaseDevice {
+public class Device implements DeviceInterface {
 
     private String type;
     private String name;
