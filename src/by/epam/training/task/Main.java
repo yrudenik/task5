@@ -80,18 +80,19 @@ public class Main {
                     deviceList.add(device);
                 }
             }
-
-//            deviceList.forEach(System.out::println);
-
-            for (int j = 0; j < deviceList.size(); j++) {
-                System.out.print("Device" + (j + 1) + ": ");
-                System.out.print(deviceList.get(j).getType() + ", ");
-                System.out.print(deviceList.get(j).getName() + ", ");
-                System.out.print(deviceList.get(j).getPrice() + " ");
-                System.out.print(deviceList.get(j).getCurrency() + ", ");
-                System.out.print(deviceList.get(j).getWeight() + " ");
-                System.out.println(deviceList.get(j).getMeasure());
-            }
+//          Вывод на экран список девайсов
+//            for (int j = 0; j < deviceList.size(); j++) {
+//                System.out.print("Device" + (j + 1) + ": ");
+//                System.out.print(deviceList.get(j).getType() + ", ");
+//                System.out.print(deviceList.get(j).getName() + ", ");
+//                System.out.print(deviceList.get(j).getPrice() + " ");
+//                System.out.print(deviceList.get(j).getCurrency() + ", ");
+//                System.out.print(deviceList.get(j).getWeight() + " ");
+//                System.out.println(deviceList.get(j).getMeasure());
+//            }
+//
+//            System.out.println("Total Price = " + totalPrice + " BYN");
+//            System.out.println("Total Weight = " + totalWeight + " gram");
 
             try {
                 FileOutputStream export = new FileOutputStream(new File("./exported.xml"));
@@ -104,18 +105,12 @@ public class Main {
                 encoder.close();
                 export.close();
 
-
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
 
-
         } catch (ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
-
-        System.out.println("Total Price = " + totalPrice + " BYN");
-        System.out.println("Total Weight = " + totalWeight + " gram");
-
     }
 }
