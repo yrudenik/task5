@@ -57,6 +57,7 @@ public class Device implements DeviceInterface {
         this.weight = weight;
     }
 
+
     @Override
     public void turnOn() {
 
